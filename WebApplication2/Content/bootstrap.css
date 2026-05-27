@@ -1,0 +1,216 @@
+body {
+    font-family: Arial;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+.login {
+    width: 400px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.logintitle {
+    font-weight: bolder;
+}
+
+.login td {
+    padding: 10px;
+}
+
+.navbar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding-top: 10px;
+}
+
+
+#navleft {
+    float: left;
+}
+
+#navright {
+    float: right;
+    right: 100px;
+    padding-right: 20px;
+}
+
+.aspNetHidden {
+    display: none;
+}
+
+
+.addbutton, .logintitle, .keybutton {
+    padding: 10px 10px 10px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.addbutton {
+    margin-bottom: 10px;
+}
+
+.searchbutton {
+    border-radius: 0px;
+    margin-bottom: 10px;
+}
+
+
+.validation {
+    font-size: 75%;
+}
+
+.pdmain {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    background-color: rgb(207,200,214);
+    border-radius: 15px;
+    padding: 30px 10px 10px 10px;
+}
+
+.pdleft {
+    display: inline-block;
+    text-align: right;
+    width: 25%;
+    font-weight: bold;
+}
+
+.pdright {
+    display: inline;
+    text-align: left;
+}
+
+
+
+
+
+
+    .pdright select {
+        height: 26px;
+    }
+
+.formsection {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.gvrow td, .gvheader th {
+    text-align: center;
+}
+
+
+.gvrow td, .gvheader th {
+    border: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+table {
+    max-width: 100%;
+    background-color: rgb(207,200,214);
+    border-radius: 10px;
+    border: 1px solid transparent;
+    margin-top: 10px;
+}
+
+    table th:first-child {
+        border-radius: 10px 0 0 0;
+    }
+
+    table th:last-child {
+        border-radius: 0 10px 0 0;
+    }
+
+th {
+    text-align: left;
+    background-color: rgb(70,22,107);
+    color: white;
+}
+
+.gvrow:hover {
+    background-color: rgb(231,228,235);
+}
+
+tr:last-child > td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tr:last-child > td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.colValidationDate {
+    width: 190px;
+}
+
+.colIpaddress {
+    width: 150px;
+}
+
+
+div.grid div {
+       display: inline-block;
+    vertical-align: top;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 5px;
+    background-color: rgb(207,200,214);
+    height: 220px;
+    border-radius: 10px;
+}
+
+@media all and (max-width: 1400px) {
+    table, .grid label {
+        font-size: 11pt;
+    }
+}
+
+
+@media all and (max-width: 1200px) {
+    table, .grid label, div.grid input, select {
+        font-size: 10pt;
+    }
+
+    div.grid div {
+        width: 230px;
+    }
+}
+
+
+
+@media all and (max-width: 1000px) {
+    table, .grid label, div.grid input, select {
+        font-size: 9pt; 
+    }
+}
+
+@media all and (max-width: 800px) {
+    table, .grid label, div.grid input, select {
+        font-size: 8pt;
+    }
+
+    body {
+        margin-top: 20px;
+    }
+
+    .navbar {
+        font-size: 80%;
+    }
+}

@@ -1,0 +1,96 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="InvoTechLicensingApp.SiteMaster" %>
+
+<%@ Import Namespace="InvoTechLicensingApp" %>
+<%@ Import Namespace="Microsoft.AspNet.Identity" %>
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %></title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" runat="server" />
+<link href="~/Content/Site.css" rel="stylesheet" type="text/css" runat="server" />
+    <link href="~/favicon.ico?" rel="shortcut icon" type="image/x-icon" />
+      
+
+    <script type = 'text/javascript' >
+        var appInsights=window.appInsights||function(config)
+        {
+            function r(config){ t[config] = function(){ var i = arguments; t.queue.push(function(){ t[config].apply(t, i)})} }
+            var t = { config:config},u=document,e=window,o='script',s=u.createElement(o),i,f;for(s.src=config.url||'//az416426.vo.msecnd.net/scripts/a/ai.0.js',u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=['Event','Exception','Metric','PageView','Trace','Ajax'];i.length;)r('track'+i.pop());return r('setAuthenticatedUserContext'),r('clearAuthenticatedUserContext'),config.disableExceptionTracking||(i='onerror',r('_'+i),f=e[i],e[i]=function(config, r, u, e, o) { var s = f && f(config, r, u, e, o); return s !== !0 && t['_' + i](config, r, u, e, o),s}),t
+        }({
+            instrumentationKey:'6acc88c9-9928-4835-a6a7-620245f09921'
+        });
+        
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+
+     
+
+    </script>
+    
+    <style type="text/css">
+        .auto-style1 {
+            width: 160px;
+            height: 41px;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+     <div class="navbar">
+           
+                <div id="navleft">
+                    <a class="navbar-brand" runat="server" href="~/">
+                    <img alt="" height="50" src="<%= Page.ResolveUrl("~/Graphics/Image-w-white.png") %>"/></a>
+                </div>
+                <div id="navright">
+                    
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <a runat="server" href="~/">Log in</a>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <a href="Users" >Users</a> |
+                             <a href="PropertiesLookup">Properties</a> |
+                             <a href="Firewall" >Firewall</a> |
+                            <a href="KeyGen" >Key Gen</a> |
+                             <%: Context.User.Identity.GetUserName()  %> (<asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />)
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+          
+        </div>
+        <div class="maincontent">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>                       
+        </div>
+    </form>
+</body>
+</html>
