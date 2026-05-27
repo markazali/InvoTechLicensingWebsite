@@ -384,6 +384,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Global.asax" />
+    <Content Include="SQL\dbo.GetDateCDT.sql" />
+    <Content Include="SQL\dbo.IsIpAddressInRange.sql" />
     <Content Include="test.aspx" />
     <Content Include="Users.aspx" />
     <Content Include="UsersDetails.aspx" />
